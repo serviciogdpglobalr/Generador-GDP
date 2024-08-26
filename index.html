@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/styles.css">
+    <title>Generador GDP</title>
+</head>
+<body>
+    <h1>GENERADOR DE RESPUESTAS GDP</h1>
+    <section class="form-container">
+        <form action="">
+            <label for="tipo">Tipo</label>
+            <select name="tipo" id="tipo">
+                <option value="creacion">Creación PBI</option>
+                <option value="escalamiento">Escalamiento</option>
+                <option value="cierre-pbi">Cierre PBI</option>
+                <option value="cierre-pbi-pke">Cierre PBI-PKE</option>
+                <option value="cierre-pke">Cierre PKE</option>
+                <option value="desarrollo">Certificación Desarrollo</option>
+                <option value="incidencias">Certificación Incidencias</option>
+            </select>
+            <label for="pbi">PBI</label>
+            <input type="text" id="pbi">
+            <label for="pke">PKE</label>
+            <input type="text" id="pke">
+            <label for="crq">CRQ/RQ</label>
+            <input type="text" id="crq">
+            <label for="titulo">Título</label>
+            <input type="text" id="titulo">
+            <label for="fecha">Fecha</label>
+            <input type="text" id="fecha">
+            <label for="horario">Horario</label>
+            <select name="horario" id="horario">
+                <option value="dia">Mañana</option>
+                <option value="tarde">Tarde</option>
+            </select>
+            <button type="button" onclick="generateAnswer()">Generar</button>
+        </form>
+    </section>
+    <section class="respuesta-container">
+        <div class="text-container">
+            <p class="respuesta"></p>
+        </div>
+        <button class="copy-button" type="button" onclick="copiarContenido()">Copiar</button>
+    </section>
+    <script src="./src/index.js"></script>
+</body>
+</html>
